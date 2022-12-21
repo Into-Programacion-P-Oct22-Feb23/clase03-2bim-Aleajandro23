@@ -40,3 +40,4 @@ public class Ejemplo03 {
     }
     
 }
+// se puede tomar otra arreglo

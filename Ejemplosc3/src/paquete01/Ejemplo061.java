@@ -9,7 +9,7 @@ package paquete01;
  *
  * @author reroes
  */
-public class Ejemplo06 {
+public class Ejemplo061 {
 
     /**
      * @param args the command line arguments
@@ -20,21 +20,29 @@ public class Ejemplo06 {
         int[][] arreglo1 = {{10, 41, 40}, {1, 2, 3}};
         /*
                 col0 |   col1 |   col2 |
-       fila0   |10   |   41   |  40    |
+       fila0   |10   |   41   |  40    |      [0,0]
        fila1   | 1   |   2    |  3     |
         */
         int suma = 0;
         int valor;
+        String mensaje = "";
+        
         for (int fila = 0; fila < arreglo1.length; fila++) {
             for (int col = 0; col < arreglo1[fila].length; col++) {
                 valor = arreglo1[fila][col];
                 if (fila==col){ // cuandno fila y columna sean iguales se suma
                     suma = suma + valor;
+                   // mensaje = String.format("%sLa suma de:\n%s\n%s\nEs igual a %s",mensaje 
+                   //         , arreglo1[fila][col], suma);
+                   
+                  mensaje = String.format("%s\n%s\t",mensaje 
+                          , arreglo1[fila][col]);
                 }
                 
             }
         }
-        System.out.printf("Suma de valores del arreglo: %d\n", suma);
+        System.out.printf("La suma de: %s\nEs igual: %d\n", mensaje , suma);
+        // System.out.println("Es igual a "+ suma);
     }
     
 }
